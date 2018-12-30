@@ -60,7 +60,7 @@ function EnterCity(props){
         <div style = {{marginTop: '10px'}}>
             <h2>Welcome to demo of react hooks and context api</h2>
             <div style= {{margin:'0px 80px 0px 80px'}}>
-                {true && <Select isLoading={isLoading} isClearable onInputChange={(text)=>{cityTextChange(text)}} onChange = {(city)=>{setSelectedCity(city.value)}} placeholder={"Select City"} options = {optionData}></Select>}
+                {true && <Select isLoading={isLoading} isClearable onInputChange={(text)=>{cityTextChange(text)}} onChange = {(city)=>{setSelectedCity(city ? city.value : '')}} placeholder={"Select City"} options = {optionData}></Select>}
                 {
                  false && <input type = "text" onChange= {(event)=>{cityTextChange(event.target.value)}}></input>
                 }
